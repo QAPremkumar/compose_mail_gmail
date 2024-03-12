@@ -1,55 +1,55 @@
 package org.stepdefinations;
 
-import com.microsoft.playwright.*;
-import com.microsoft.playwright.assertions.LocatorAssertions;
-import com.microsoft.playwright.options.LoadState;
-import com.microsoft.playwright.options.WaitUntilState;
-import com.microsoft.playwright.Download;
-import io.cucumber.java.en.*;
-import org.apache.pdfbox.Loader;
-import org.hplx.config_manager.ReadLocatorUtils;
-import org.hplx.driver.PlaywrightFactory;
-import org.hplx.user_actions.*;
-import org.hplx.utils.*;
-import org.testng.Assert;
+import io.cucumber.java.en.Given;
+        import io.cucumber.java.en.When;
+        import io.cucumber.java.en.Then;
 
-import java.io.*;
-import java.net.URL;
-import java.nio.file.Paths;
-import java.security.SecureRandom;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Random;
-import java.util.Map;
+public class GmailSteps {
 
-import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
-import static org.hplx.config_manager.ConfigFactory.getConfig;
-
-import static org.hplx.constants.PageURL.*;
-import static org.testng.Assert.assertTrue;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
-import java.io.File;
-import java.io.IOException;
-
-import org.apache.pdfbox.text.PDFTextStripper;
-import org.testng.annotations.AfterClass;
-import org.apache.pdfbox.pdmodel.PDDocument;
-
-public class TestSteps {
-    static Map<String, Map<String, String>> excelData;
-
-    static {
-        ExcelReader excelReader = new ExcelReader();
-        try {
-            excelData = excelReader.getExcelAsMap();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+    @Given("I am logged in to Gmail")
+    public void loginToGmail() {
+        // Implement login steps
     }
 
-    public TestSteps() {
+    @When("I click on the {string} button")
+    public void clickButton(String button) {
+        // Implement click button steps
     }
 
+    @And("I enter the recipient email address {string}")
+    public void enterRecipient(String recipient) {
+        // Implement enter recipient steps
+    }
 
+    @And("I enter the subject {string}")
+    public void enterSubject(String subject) {
+        // Implement enter subject steps
+    }
+
+    @And("I type the email body {string}")
+    public void typeEmailBody(String body) {
+        // Implement type email body steps
+    }
+
+    @And("I click on the {string} button")
+    public void clickSendButton(String sendButton) {
+        // Implement click send button steps
+    }
+
+    @Then("the email should be sent successfully")
+    public void verifyEmailSent() {
+        // Implement verification steps
+    }
+
+    @When("I navigate to the {string} folder")
+    public void navigateToFolder(String folder) {
+        // Implement navigation steps
+    }
+
+    @Then("I should see the sent email with the subject {string} and recipient {string}")
+    public void verifySentEmail(String subject, String recipient) {
+        // Implement verification steps
+    }
+
+    // Add more step definitions for other scenarios as needed
 }

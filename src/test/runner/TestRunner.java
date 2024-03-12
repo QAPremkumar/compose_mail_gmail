@@ -5,21 +5,14 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
-        features = "src/test/java/org/hplx/feature_files",
-        glue = "org.hplx.stepdefinations",
+        features = "src/test/feature_files",
+        glue = "org.stepdefinations",
         plugin = {
-                "pretty",
-                "html:test-results/DefaultReport.html",
-                "json:target/cucumber.json",
-                "json:target/cucumber.xml",
-                "json:target/cucumber-report/cucumber.json",
-                "rerun:target/failedrerun.txt",
-                "timeline:target/threadTimelines",
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
         },
         publish = true,
-        tags = "@pdf-testing and not @ignore",
+        tags = "@gmail",
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         monochrome = true
 )
