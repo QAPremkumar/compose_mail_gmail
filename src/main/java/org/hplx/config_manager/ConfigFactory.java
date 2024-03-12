@@ -1,13 +1,31 @@
-package org.hplx.config_manager;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
 
-import org.aeonbits.owner.ConfigCache;
+public class ConfigFactory {
+    private static Properties properties;
 
-public class ConfigFactory { //no one can extend this
-
-    private ConfigFactory(){
-        // Prevent instantiation
+    static {
+        properties = loadProperties();
     }
-    public static FrameworkConfig getConfig(){
-        return ConfigCache.getOrCreate(FrameworkConfig.class);
+
+    private static Properties loadProperties() {
+        Properties prop = new Properties();
+        try (FileInputStream input = new FileInputStream("src/test/resources/config.properties")) {
+            prop.load(input);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return prop;
     }
+
+    public static String getBaseUrl() {
+        return properties.getProperty("base.url");
+    }
+
+    public static String getBrowserType() {
+        return properties.getProperty("browser.type");
+    }
+
+    // Add more methods for other configuration settings as needed
 }
