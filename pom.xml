@@ -20,6 +20,13 @@
             <version>3.141.59</version> <!-- Check for the latest version on the Selenium website -->
         </dependency>
 
+
+        <dependency>
+            <groupId>com.microsoft.playwright</groupId>
+            <artifactId>playwright</artifactId>
+            <version>1.10.0</version> <!-- Check for the latest version -->
+        </dependency>
+
         <!-- Cucumber for Java -->
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -32,7 +39,15 @@
             <version>6.9.1</version> <!-- Check for the latest version on the Cucumber website -->
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.7.1</version>
+        </dependency>
+
     </dependencies>
+    <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 
     <build>
         <plugins>

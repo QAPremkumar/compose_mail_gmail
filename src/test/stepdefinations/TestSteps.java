@@ -5,8 +5,10 @@ import io.cucumber.java.en.Given;
 public class GmailSteps {
 
     @Given("I am logged in to Gmail")
-    public void loginToGmail() {
-        // Implement login steps
+        public void i_am_logged_in_to_gmail("https://mail.google.com/mail/u/0/#inbox") {
+            // Write code here that turns the phrase above into concrete actions
+            throw new io.cucumber.java.PendingException();
+        }
     }
 
     @When("I click on the {string} button")
